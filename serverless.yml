@@ -1,0 +1,15 @@
+# "org" ensures this Service is used with the correct Serverless Framework Access Key.
+org: aaronfay
+# "service" is the name of this project. This will also be added to your AWS resource names.
+service: lambda-scraper
+
+provider:
+  name: aws
+  profile: aaron-aws
+  runtime: nodejs20.x
+  memorySize: 4096
+  timeout: 60
+
+functions:
+  hello:
+    handler: handler.scrape
